@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 969377506}
   - component: {fileID: 969377505}
   m_Layer: 0
-  m_Name: PlayerCharacter01
+  m_Name: troop_Punx01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
