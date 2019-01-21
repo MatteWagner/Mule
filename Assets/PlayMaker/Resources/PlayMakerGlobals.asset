@@ -15,14 +15,38 @@ MonoBehaviour:
   variables:
     floatVariables: []
     intVariables: []
-    boolVariables: []
+    boolVariables:
+    - useVariable: 1
+      name: Global_ManagerHasSquadSelected
+      tooltip: 
+      showInInspector: 1
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: mouseCanSelect
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     stringVariables: []
     vector2Variables: []
     vector3Variables: []
     colorVariables: []
     rectVariables: []
     quaternionVariables: []
-    gameObjectVariables: []
+    gameObjectVariables:
+    - useVariable: 1
+      name: GlobalManager_PlayerInputs
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: Global_CurrentlySelectedSquad
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
     objectVariables: []
     materialVariables: []
     textureVariables: []
@@ -30,6 +54,13 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 
+    variableCategoryIDs: 00000000000000000000000000000000
   events:
   - NoLongerSelected
+  - globalSelection_NavSquareMouseEnter
+  - globalSelection_NavSquareMouseExit
+  - globalSelection_SquadMouseEnter
+  - globalSelection_SquadMouseExit
+  - globalSelection_SquadSelect
+  - globalSelection_ClearSelection
+  - globalSelection_SquadDeselect

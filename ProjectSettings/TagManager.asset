@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - SelectableObjects
-  - 
-  - 
+  - Characters
+  - Navigation UI
+  - Background
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 32109305
+    locked: 0
+  - name: Characters
+    uniqueID: 197012547
+    locked: 0
+  - name: CharacterUI
+    uniqueID: 125314527
+    locked: 0
+  - name: NavigationUI
+    uniqueID: 3605262337
+    locked: 0
+  - name: Background
+    uniqueID: 2474200687
     locked: 0
