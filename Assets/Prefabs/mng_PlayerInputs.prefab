@@ -119,7 +119,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 116
+        y: 100
         width: 100
         height: 32
       isBreakpoint: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Mouse Button Up
+        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -138,15 +138,13 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetOwner
         - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.SetBoolValue
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000100000004000000
-        actionHashCodes: 5c00450527fbe10327fbe103
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: 5c00450527fbe103
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -182,220 +180,25 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: Global_ManagerHasSquadSelected
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000110000001100000001000000110000001100000001000000
+        paramDataType: 13000000110000001100000001000000
         paramName:
         - storeGameObject
         - boolVariable
         - boolValue
         - everyFrame
-        - boolVariable
-        - boolValue
-        - everyFrame
-        paramDataPos: 00000000000000000100000000000000020000000300000001000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000
-    - name: Mouse Button Up
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 240
-        y: 112
-        width: 153
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: canSelectNegative
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Mouse Button Down
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.GetMouseButtonDown
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 27fbe10334b46c04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: mouseCanSelect
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - canSelectNegative
-        byteData: 000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 11000000110000000100000007000000170000001100000001000000
-        paramName:
-        - boolVariable
-        - boolValue
-        - everyFrame
-        - button
-        - sendEvent
-        - storeResult
-        - inUpdateOnly
-        paramDataPos: 00000000010000000000000001000000000000000200000005000000
-        paramByteDataSize: 00000000000000000100000004000000000000000000000001000000
-    - name: Mouse Button Down
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 448
-        y: 112
-        width: 161
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: canSelectPositive
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Mouse Button Up
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.GetMouseButtonUp
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 27fbe10334b46c04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: mouseCanSelect
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - canSelectPositive
-        byteData: 000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 11000000110000000100000007000000170000001100000001000000
-        paramName:
-        - boolVariable
-        - boolValue
-        - everyFrame
-        - button
-        - sendEvent
-        - storeResult
-        - inUpdateOnly
-        paramDataPos: 00000000010000000000000001000000000000000200000005000000
-        paramByteDataSize: 00000000000000000100000004000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -417,7 +220,13 @@ MonoBehaviour:
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
-      gameObjectVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: Global_ManagersCurrentlySelectedSquad
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -425,7 +234,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 
+      variableCategoryIDs: 00000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -936,7 +745,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 100
+        y: 116
         width: 100
         height: 16
       isBreakpoint: 0
@@ -944,12 +753,14 @@ MonoBehaviour:
       hideUnused: 0
       transitions: []
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -966,27 +777,609 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: hasSquadCurrentlySelected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: 'Test: Squad Currently Selected?'
+      description: 'Tests to see if the manager currently has a squad selected.
+
+
+        If so, send event to check if the new squad is the same as the current squad.'
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 400
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: selection_CurrentlyHasSquadSelectedPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: 'Test: Is Current Squad Same as New Squad?'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: selection_CurrentlyHasSquadSelectedNegative
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set New Selected Squad to be Current Squad
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: hasSquadCurrentlySelected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - selection_CurrentlyHasSquadSelectedPositive
+        - selection_CurrentlyHasSquadSelectedNegative
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Set New Selected Squad to be Current Squad
+      description: Updates manager's current selection and sends selection event to
+        that squad
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 688
+        y: 432
+        width: 400
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetGameObject
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 4d51cf0427fbe1035e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: myCurrentSelectionSquad
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: myNewSelectionSquad
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: myCurrentSelectionSquad
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM_SquadSelection
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: hasSquadCurrentlySelected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - globalSelection_SquadSelect
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000013000000010000001100000011000000010000001f000000170000000f00000001000000
+        paramName:
+        - variable
+        - gameObject
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000010000000000000000000000010000000100000000000000000000000000000002000000
+        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000000000001000000
+    - name: 'Test: Is Current Squad Same as New Squad?'
+      description: "Checks to see if NewSelection is Null. \n\nIf not, then proceed
+        to select that new squad."
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 688
+        y: 128
+        width: 362
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: selection_NewSquadEqualsCurrentSquadPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Deselect Current Squad
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: selection_NewSquadEqualsCurrentSquadNegative
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Send Deselect Event to Current Selection
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ef8d8504
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: myNewSelectionSquad
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: myCurrentSelectionSquad
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - selection_NewSquadEqualsCurrentSquadPositive
+        - selection_NewSquadEqualsCurrentSquadNegative
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001300000017000000170000001100000001000000
+        paramName:
+        - gameObjectVariable
+        - compareTo
+        - equalEvent
+        - notEqualEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 000000000000000000000000010000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: Deselect Current Squad
+      description: Reset selection  to none and sends deselection event to squad
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 1120
+        y: 144
+        width: 311.5
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetGameObject
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 4d51cf0427fbe1035e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Global_ManagersCurrentlySelectedSquad
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: myCurrentSelectionSquad
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM_SquadSelection
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: hasSquadCurrentlySelected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - globalSelection_SquadDeselect
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000013000000010000001100000011000000010000001f000000170000000f00000001000000
+        paramName:
+        - variable
+        - gameObject
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000010000000000000000000000010000000100000000000000000000000000000002000000
+        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000000000001000000
+    - name: Send Deselect Event to Current Selection
+      description: 'Sends deselection event to the old '
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 688
+        y: 288
+        width: 301
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Set New Selected Squad to be Current Squad
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: myCurrentSelectionSquad
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM_SquadSelection
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - globalSelection_SquadDeselect
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: Deselect Me
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: ManagerHasSelectionNegative
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: ManagerHasSelectionPositive
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Select Me
+      isSystemEvent: 0
+      isGlobal: 0
     - name: globalSelection_ClearSelection
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: globalSelection_SelectNewSquad
       isSystemEvent: 0
       isGlobal: 1
     - name: globalSelection_SquadDeselect
@@ -1001,7 +1394,25 @@ MonoBehaviour:
     - name: globalSelection_SquadSelect
       isSystemEvent: 0
       isGlobal: 1
+    - name: selection_CompareCurrentSquadToNewSquad
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: selection_CurrentlyHasSquadSelectedNegative
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: selection_CurrentlyHasSquadSelectedPositive
+      isSystemEvent: 0
+      isGlobal: 0
     - name: selection_DeselectCurrentSquad
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: selection_NewSquadEqualsCurrentSquadNegative
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: selection_NewSquadEqualsCurrentSquadPositive
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: selection_NewSquadSelectedPositive
       isSystemEvent: 0
       isGlobal: 0
     - name: selection_SelectNewSquad
@@ -1013,7 +1424,15 @@ MonoBehaviour:
     - name: sendNull
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    globalTransitions:
+    - fsmEvent:
+        name: globalSelection_SelectNewSquad
+        isSystemEvent: 0
+        isGlobal: 1
+      toState: 'Test: Squad Currently Selected?'
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables: []
@@ -1038,25 +1457,25 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: myCurrentHighlightSquad
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      - useVariable: 1
         name: myCurrentSelectionSquad
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: myCurrentSelectionSquadInteract
+        name: myNewSelectionSquad
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: myNewSelectionSquad
+        name: mySelectionElement
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: mySelf
         tooltip: 
         showInInspector: 0
         networkSync: 0
