@@ -8,6 +8,8 @@ TagManager:
   - Detection Cube
   - Enemy
   - UI_SelectedState
+  - UI_SquadHighlightElement
+  - SquadTroopPosition
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Characters
   - Navigation UI
   - Background
-  - 
+  - UI_SquadHighlight
   - 
   - 
   - 

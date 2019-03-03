@@ -65,3 +65,7 @@ MonoBehaviour:
   - globalSelection_ClearSelection
   - globalSelection_SquadDeselect
   - globalSelection_SelectNewSquad
+  - globalInstruction_BeckonTroops
+  - globalInstruction_MoveSquadControlElement
+  - global_BeckonSingleTroopChild
+  - globalInstruction_BeckonTroopToMyPosition
