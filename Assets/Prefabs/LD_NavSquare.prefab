@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3784138709946055809}
+  - component: {fileID: 5809071193771458673}
   - component: {fileID: 6539561849907498801}
   - component: {fileID: 6848965875862834272}
   - component: {fileID: 1588529212599498515}
@@ -34,6 +35,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5809071193771458673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204614809142222892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: FSM_GeneralVariables
+    startState: State 1
+    states:
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events: []
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 3
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
 --- !u!114 &6539561849907498801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +194,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64
-        y: 208
+        y: 112
         width: 100
         height: 32
       isBreakpoint: 0
@@ -75,15 +211,13 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.GetOwner
         customNames:
         - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 48c011015c004505
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5c004505
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -104,13 +238,7 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
+        fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -118,28 +246,24 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - 
-        byteData: 00
+        stringParams: []
+        byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f000000170000000100000013000000
+        paramDataType: 13000000
         paramName:
-        - time
-        - finishEvent
-        - realTime
         - storeGameObject
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000100000000000000
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     - name: Wait For Hover Enter
       description: 
       colorIndex: 6
       position:
         serializedVersion: 2
         x: 208
-        y: 224
+        y: 128
         width: 170
         height: 32
       isBreakpoint: 0
@@ -235,7 +359,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 416
-        y: 240
+        y: 144
         width: 218
         height: 48
       isBreakpoint: 0
@@ -312,13 +436,19 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
     - name: Perform Selection
-      description: Sends event to input manager telling it to send the squad here
+      description: 'Set currentlySelectedSquad control element Vector3 to my location
+
+
+        Set currentlySelectedSquad''s reserved NavSquare game object variable to mySelf
+
+
+        Send Event MoveSquadControlElement to input manager'
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1024
-        y: 160
-        width: 294
+        x: 1216
+        y: 304
+        width: 362
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -336,17 +466,25 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.SetFsmVector3
+        - HutongGames.PlayMaker.Actions.SetFsmGameObject
         - HutongGames.PlayMaker.Actions.SendEvent
         customNames:
         - 
         - 
+        - Set Fsm Game Object
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000070000000c000000
-        actionHashCodes: 5552ad05bf9f37025e69bb04
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000070000000c00000011000000
+        actionHashCodes: 5552ad05bf9f37025b66cf005e69bb04
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: mySelf
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
@@ -360,6 +498,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: GlobalManager_PlayerInputs
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Global_CurrentlySelectedSquad
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -391,7 +537,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: Inputs_SquadMovement
+            value: SelectionManager_LD
           sendToChildren:
             useVariable: 0
             name: 
@@ -415,6 +561,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: squadMovement_DestinationCoordinates
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: SelectionManager_LD
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: navSquareToBeReserved
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -464,13 +622,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - globalInstruction_MoveSquadControlElement
-        byteData: 00000000000000
+        - globalSelection_NavSquareSetAsCurrentlySelectedSquadReservedLocation
+        byteData: 0000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000001400000012000000120000001c000000010000001f000000170000000f00000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000001400000012000000120000001c0000000100000014000000120000001200000013000000010000001f000000170000000f00000001000000
         paramName:
         - gameObject
         - vector
@@ -484,19 +642,24 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000001000000020000000000000004000000010000000000000001000000010000000500000000000000000000000300000006000000
-        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000010000000200000000000000040000000100000000000000010000000100000005000000020000000200000003000000000000000600000000000000000000000300000007000000
+        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: Wait For Hover Exit Or Player Selection
       description: 
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 672
-        y: 128
+        x: 896
+        y: 176
         width: 293
         height: 48
       isBreakpoint: 0
@@ -515,7 +678,7 @@ MonoBehaviour:
           name: MOUSE DOWN
           isSystemEvent: 1
           isGlobal: 0
-        toState: Perform Selection
+        toState: 'TEST: Am I Currently Reserved?'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -600,7 +763,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 672
-        y: 256
+        y: 160
         width: 187
         height: 32
       isBreakpoint: 0
@@ -737,8 +900,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 432
-        y: 144
+        x: 1008
+        y: 112
         width: 177
         height: 32
       isBreakpoint: 0
@@ -842,8 +1005,8 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1360
-        y: 112
+        x: 1344
+        y: 160
         width: 152
         height: 32
       isBreakpoint: 0
@@ -916,7 +1079,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 224
-        y: 368
+        y: 272
         width: 160
         height: 32
       isBreakpoint: 0
@@ -1006,6 +1169,88 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000010000000200000003000000000000000000000000000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: 'TEST: Am I Currently Reserved?'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1264
+        y: 224
+        width: 242
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CurrentlyReservedPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait for Mouse Up
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CurrentlyReservedNegative
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Perform Selection
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: myReservedStatus
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - CurrentlyReservedPositive
+        - CurrentlyReservedNegative
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1022,6 +1267,12 @@ MonoBehaviour:
     - name: MOUSE UP
       isSystemEvent: 1
       isGlobal: 0
+    - name: CurrentlyReservedNegative
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: CurrentlyReservedPositive
+      isSystemEvent: 0
+      isGlobal: 0
     - name: PlayerHasSelectionNegative
       isSystemEvent: 0
       isGlobal: 0
@@ -1035,6 +1286,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 1
     - name: globalSelection_NavSquareMouseExit
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: globalSelection_NavSquareSetAsCurrentlySelectedSquadReservedLocation
       isSystemEvent: 0
       isGlobal: 1
     globalTransitions: []
@@ -1052,6 +1306,12 @@ MonoBehaviour:
         name: mouseIsHovering
         tooltip: 
         showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: myReservedStatus
+        tooltip: 
+        showInInspector: 1
         networkSync: 0
         value: 0
       stringVariables: []
@@ -1080,7 +1340,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
