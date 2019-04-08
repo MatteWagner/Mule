@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2432986443654261646}
   - component: {fileID: 1440952093974399651}
   m_Layer: 0
-  m_Name: mng_FactionTracker_Enemy
+  m_Name: mng_EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

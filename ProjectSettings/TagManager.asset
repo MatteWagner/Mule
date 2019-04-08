@@ -10,9 +10,6 @@ TagManager:
   - UI_SelectedState
   - UI_SquadHighlightElement
   - SquadTroopPosition
-  - Navigation_NavSquare
-  - Squad_PlayerFaction
-  - mng_FactionTracker_Player
   layers:
   - Default
   - TransparentFX
