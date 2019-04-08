@@ -70,3 +70,4 @@ MonoBehaviour:
   - global_BeckonSingleTroopChild
   - globalInstruction_BeckonTroopToMyPosition
   - globalSelection_NavSquareSetAsCurrentlySelectedSquadReservedLocation
+  - globalTroopManagement_AddToTracker

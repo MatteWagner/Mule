@@ -110,7 +110,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: Global Variables
+    name: Initialization and Variables
     startState: State 1
     states:
     - name: State 1
@@ -258,7 +258,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 3
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
@@ -980,6 +980,9 @@ MonoBehaviour:
     - name: globalSelection_NavSquareMouseExit
       isSystemEvent: 0
       isGlobal: 1
+    - name: globalSelection_NavSquareReservationFromEmptySelection
+      isSystemEvent: 0
+      isGlobal: 0
     - name: globalSelection_NavSquareSetAsCurrentlySelectedSquadReservedLocation
       isSystemEvent: 0
       isGlobal: 1
@@ -1073,7 +1076,9 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 000000000000000000000000000000000000000000000000
-    description: 'Highlight Level Elements
+    description: 'NEEDS TO GO TO LEVEL CONTROLLER
+
+      Highlight Level Elements
 
 
       Reserve/Release navSquare reservations'
@@ -1902,7 +1907,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 0
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
@@ -2285,7 +2290,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 0
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
