@@ -10,6 +10,7 @@ TagManager:
   - UI_SelectedState
   - UI_SquadHighlightElement
   - SquadTroopPosition
+  - LD_NavSquare
   layers:
   - Default
   - TransparentFX

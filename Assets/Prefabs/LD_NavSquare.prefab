@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3797564960563970892}
   m_Layer: 10
   m_Name: LD_NavSquare
-  m_TagString: Untagged
+  m_TagString: LD_NavSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -70,3 +70,8 @@ MonoBehaviour:
   - global_BeckonSingleTroopChild
   - globalInstruction_BeckonTroopToMyPosition
   - globalSelection_NavSquareSetAsCurrentlySelectedSquadReservedLocation
+  - globalCombat_SendEnemyEnteredEvent
+  - globalCombat_SendEnemyExitedEvent
+  - globalCombat_EnemyEnteredRange
+  - globalCombat_EnemyExitedRange
+  - globalCombat_EnemyAddedToArray
