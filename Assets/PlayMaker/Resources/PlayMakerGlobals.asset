@@ -75,3 +75,6 @@ MonoBehaviour:
   - globalCombat_EnemyEnteredRange
   - globalCombat_EnemyExitedRange
   - globalCombat_EnemyAddedToArray
+  - globalCombat_DamageDodge
+  - globalCombat_DamageHit
+  - globalCombat_DamageMiss
