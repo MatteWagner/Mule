@@ -89,3 +89,5 @@ MonoBehaviour:
   - globalDebug_DrawLine_AttackMiss
   - globalCombat_DamageDealt
   - globalCombat_DamageReceived
+  - globalPositioning_MoveSquadToMe
+  - globalSelection_ClearSelectionPostRepositioning
