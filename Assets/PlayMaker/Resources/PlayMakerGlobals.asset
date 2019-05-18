@@ -91,3 +91,13 @@ MonoBehaviour:
   - globalCombat_DamageReceived
   - globalPositioning_MoveSquadToMe
   - globalSelection_ClearSelectionPostRepositioning
+  - globalSpawning_SpawnTroopChild
+  - globalInstruction_myScrapDeselectionBehavior
+  - globalSelection_NavSquareDeselected
+  - globalSelection_NavSquareSelected
+  - globalSelection_NavSquareScrapSelectionEvents
+  - globalSelection_NavSquareScrapDeselectionEvents
+  - globalPosition_MoveToScavengePosition
+  - globalPosition_MoveToTroopPosition
+  - globalPosition_myTroopHasArrived
+  - globalPosition_MoveTroopToMyPosition

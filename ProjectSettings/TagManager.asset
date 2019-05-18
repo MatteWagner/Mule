@@ -11,6 +11,8 @@ TagManager:
   - UI_SquadHighlightElement
   - SquadTroopPosition
   - LD_NavSquare
+  - LD_ScavengePosition
+  - PlayerCharacters
   layers:
   - Default
   - TransparentFX
