@@ -99,5 +99,6 @@ MonoBehaviour:
   - globalSelection_NavSquareScrapDeselectionEvents
   - globalPosition_MoveToScavengePosition
   - globalPosition_MoveToTroopPosition
-  - globalPosition_myTroopHasArrived
-  - globalPosition_MoveTroopToMyPosition
+  - globalInstruction_BeckonTroopToThisScavengePosition
+  - globalPosition_TroopHasArrivedAtScavengePosition
+  - globalInstruction_ScrapHarvestSubtraction
