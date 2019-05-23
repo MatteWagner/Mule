@@ -13,6 +13,7 @@ TagManager:
   - LD_NavSquare
   - LD_ScavengePosition
   - PlayerCharacters
+  - UI_PlayerFactionZones
   layers:
   - Default
   - TransparentFX
