@@ -997,7 +997,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: myCurrentScrap
+          name: myCurrentScrapGlobal
           tooltip: 
           showInInspector: 0
           networkSync: 0
