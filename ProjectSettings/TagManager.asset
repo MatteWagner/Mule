@@ -14,6 +14,7 @@ TagManager:
   - LD_ScavengePosition
   - PlayerCharacters
   - UI_PlayerFactionZones
+  - Level_ParentObjectLD
   layers:
   - Default
   - TransparentFX
