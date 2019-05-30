@@ -552,7 +552,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - globalInstructions_ScrapHarvestingBegins
+        - globalInstruction_ScrapHarvestingBegins
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
@@ -573,7 +573,7 @@ MonoBehaviour:
     - name: globalInstruction_ScrapHarvestSubtraction
       isSystemEvent: 0
       isGlobal: 1
-    - name: globalInstructions_ScrapHarvestingBegins
+    - name: globalInstruction_ScrapHarvestingBegins
       isSystemEvent: 0
       isGlobal: 1
     - name: globalPosition_MoveToScavengePosition

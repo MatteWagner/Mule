@@ -110,5 +110,6 @@ MonoBehaviour:
   - globalInstruction_ScrapHarvestSubtraction
   - globalInstruction_SendScrapToMyHarvester
   - globalInstruction_ScrapSentToMyHarvester
-  - globalInstructions_ScrapHarvestingBegins
   - globalInstruction_ScrapHarvestAttemptedByTroop
+  - globalInstruction_ScrapHarvestingEnd
+  - globalInstruction_ScrapHarvestingBegins

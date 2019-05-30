@@ -353,7 +353,7 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 240
+        x: 640
         y: 432
         width: 350
         height: 32
@@ -467,7 +467,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1120
+        x: 1520
         y: 464
         width: 197
         height: 32
@@ -541,10 +541,10 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: 'TEST: Zoom In or Out?'
       description: 
-      colorIndex: 0
+      colorIndex: 5
       position:
         serializedVersion: 2
-        x: 640
+        x: 1040
         y: 448
         width: 179
         height: 48
@@ -639,10 +639,10 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
     - name: Set Zoom to Increase
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 880
+        x: 1280
         y: 432
         width: 171
         height: 32
@@ -716,10 +716,10 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Set Zoom to Decrease
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 880
+        x: 1280
         y: 480
         width: 175
         height: 32
@@ -793,10 +793,10 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Apply Change to Camera FOV
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 272
+        x: 240
         y: 128
         width: 224
         height: 32
@@ -989,10 +989,10 @@ MonoBehaviour:
         paramByteDataSize: 0000000001000000
     - name: 'Add Zoom '
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1216
+        x: 1616
         y: 112
         width: 100
         height: 32
@@ -1067,11 +1067,11 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000100000001000000
     - name: Wait
       description: 
-      colorIndex: 0
+      colorIndex: 6
       position:
         serializedVersion: 2
-        x: 144
-        y: 256
+        x: 416
+        y: 240
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1139,10 +1139,10 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Reset Current fov to be the new float
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 128
+        x: 240
         y: 192
         width: 274
         height: 32
