@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 7772158948932612360}
   - component: {fileID: 604982816444355372}
   - component: {fileID: 5367262585435716293}
+  - component: {fileID: 1007502810699472927}
   m_Layer: 0
   m_Name: Unit Archetype
   m_TagString: PlayerCharacters
@@ -4602,7 +4603,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 10
         fsmBoolParams:
         - useVariable: 1
           name: 
@@ -4615,7 +4616,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -4689,7 +4690,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - RaycastFoundObject
-        byteData: 0000000000000000000007000000000001000000
+        byteData: 0000000001000000000107000000010100000000
         arrayParamSizes: 01000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmInt
@@ -5731,12 +5732,6 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: myAttack_AttackBehavior
-        tooltip: 0 = Keep attacking first target, 1 = attack closest target
-        showInInspector: 1
-        networkSync: 0
-        value: 1
-      - useVariable: 1
         name: myAttack_BulletsPerShot
         tooltip: 
         showInInspector: 1
@@ -5790,7 +5785,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 0
       - useVariable: 1
         name: FocusOnFirst
         tooltip: 
@@ -5877,7 +5872,7 @@ MonoBehaviour:
       - Randomized Dice Rolls
       - Target FSMs
       - Targeting Logic
-      variableCategoryIDs: 00000000030000000300000001000000010000000100000001000000060000000300000003000000060000000400000004000000040000000200000002000000020000000200000003000000060000000500000006000000000000000000000000000000060000000000000000000000
+      variableCategoryIDs: 000000000300000003000000010000000100000001000000010000000300000003000000060000000400000004000000040000000200000002000000020000000200000003000000060000000500000006000000000000000000000000000000060000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -15607,6 +15602,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!136 &1007502810699472927
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929092449100764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4378092485208855617
 GameObject:
   m_ObjectHideFlags: 0
