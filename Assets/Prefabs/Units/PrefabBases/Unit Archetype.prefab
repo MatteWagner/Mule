@@ -887,7 +887,7 @@ NavMeshAgent:
   m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 15
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2165037840613131118
 MonoBehaviour:
@@ -1223,7 +1223,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 3
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
@@ -2459,7 +2459,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 528
-        y: 320
+        y: 336
         width: 183
         height: 16
       isBreakpoint: 0
@@ -6606,7 +6606,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           typeName: 
-          value: {fileID: 2100000, guid: c18706fb75af12641af4890639658c56, type: 2}
+          value: {fileID: 0}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -16352,7 +16352,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4766803370283484964}
   - component: {fileID: 5275849883050265877}
-  - component: {fileID: 4963419122855264285}
   m_Layer: 2
   m_Name: UnitDetectionRange
   m_TagString: Untagged
@@ -16422,7 +16421,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
+        actionEnabled: 010100
         actionIsOpen: 010101
         actionStartIndex: 000000000200000003000000
         actionHashCodes: d97b72025c004505afff1105
@@ -16480,7 +16479,7 @@ MonoBehaviour:
           tooltip: Indicates how far away the unit will detect an enemy
           showInInspector: 1
           networkSync: 0
-          value: 20
+          value: 50
         - useVariable: 1
           name: 
           tooltip: 
@@ -17152,16 +17151,3 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!135 &4963419122855264285
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6038687952115668824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
