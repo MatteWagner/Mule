@@ -37,3 +37,12 @@ MonoBehaviour:
   - Value: Assets/Art/UI
     Type: 0
     Preset: {fileID: 11400000, guid: 903c05c928ff17f45a7a271c5fe0b146, type: 2}
+  - Value: Assets/Prefabs
+    Type: 0
+    Preset: {fileID: 11400000, guid: 2c4f1e710344a944f8f7bf6b34313644, type: 2}
+  - Value: Assets/Level Design Resources
+    Type: 0
+    Preset: {fileID: 11400000, guid: bcc46d6ba68c3dc4b985f454da244ea5, type: 2}
+  - Value: Assets/Prefabs/Units
+    Type: 0
+    Preset: {fileID: 11400000, guid: 5ed71d3f782ff4f4e9d6a2cfca32ddc0, type: 2}

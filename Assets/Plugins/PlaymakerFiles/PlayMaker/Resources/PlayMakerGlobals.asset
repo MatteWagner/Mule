@@ -113,3 +113,5 @@ MonoBehaviour:
   - globalInstruction_ScrapHarvestAttemptedByTroop
   - globalInstruction_ScrapHarvestingEnd
   - globalInstruction_ScrapHarvestingBegins
+  - globalInstruction_FeedbackUnitPlacementActivate
+  - globalInstruction_FeedbackUnitPlacementDeactivate
