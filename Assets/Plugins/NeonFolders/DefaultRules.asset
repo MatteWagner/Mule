@@ -46,3 +46,12 @@ MonoBehaviour:
   - Value: Assets/Prefabs/Units
     Type: 0
     Preset: {fileID: 11400000, guid: 5ed71d3f782ff4f4e9d6a2cfca32ddc0, type: 2}
+  - Value: Assets/Prefabs/Units/PrefabBases
+    Type: 0
+    Preset: {fileID: 11400000, guid: fc005090d13597945854bfe2f78ea8ab, type: 2}
+  - Value: Assets/Prefabs/Units/EnemyFaction01
+    Type: 0
+    Preset: {fileID: 11400000, guid: 6482a6a51a2efcf43be2b83145105c8f, type: 2}
+  - Value: Assets/Prefabs/Units/PlayerFaction
+    Type: 0
+    Preset: {fileID: 11400000, guid: cd906ad670e3bff46a84beb5dbccbfd3, type: 2}
