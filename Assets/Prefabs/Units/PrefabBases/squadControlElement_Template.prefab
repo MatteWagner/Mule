@@ -144,7 +144,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 8608669476492888615}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &2229897602391718358
 MeshFilter:
@@ -1275,11 +1275,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 793712241709943312}
   - {fileID: 9069050862146928383}
   - {fileID: 7622256472423981050}
   - {fileID: 3639120926138592438}
   - {fileID: 2229420388912914107}
-  - {fileID: 793712241709943312}
   - {fileID: 1694736903886225346}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1834,7 +1834,7 @@ MonoBehaviour:
           name: compareCurrentChild
           isSystemEvent: 0
           isGlobal: 0
-        toState: 'TEST: Is currentChildForLookup a Troop Spawner?'
+        toState: 'TEST: Is currentChildForLookup a Troop Position?'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1906,14 +1906,14 @@ MonoBehaviour:
         - resetFlag
         paramDataPos: 0000000000000000000000000100000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000
-    - name: 'TEST: Is currentChildForLookup a Troop Spawner?'
+    - name: 'TEST: Is currentChildForLookup a Troop Position?'
       description: 
       colorIndex: 5
       position:
         serializedVersion: 2
         x: 1264
         y: 240
-        width: 364
+        width: 358
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -2114,13 +2114,13 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000100000000000000
     - name: Set Current Child Variables
-      description: Sets variables such as move speed and fire rate for children
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
         x: 816
         y: 320
-        width: 317.5
+        width: 209
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2909,7 +2909,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -3981,22 +3981,50 @@ MonoBehaviour:
       hideUnused: 0
       transitions: []
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetChild
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 184b5704
         unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: myChildBanner
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: UnitFlag
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4015,10 +4043,14 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 14000000120000001200000013000000
+        paramName:
+        - gameObject
+        - childName
+        - withTag
+        - storeResult
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000
     - name: Set new selection to be current
       description: 
       colorIndex: 3
@@ -4036,7 +4068,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Move me to the new position
+        toState: Move Me to the New Position
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -4096,14 +4128,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: Move me to the new position
+    - name: Move Me to the New Position
       description: 
       colorIndex: 3
       position:
         serializedVersion: 2
         x: 736
         y: 144
-        width: 219
+        width: 221
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4113,7 +4145,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Beckon troops
+        toState: Rotate to Match NavSquare Rotation
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -4244,7 +4276,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1008
+        x: 1200
         y: 160
         width: 124
         height: 32
@@ -4349,7 +4381,7 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1184
+        x: 1376
         y: 176
         width: 185
         height: 16
@@ -4546,6 +4578,212 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: Rotate to Match NavSquare Rotation
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 736
+        y: 192
+        width: 269
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Beckon troops
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetRotation
+        - HutongGames.PlayMaker.Actions.SetRotation
+        - HutongGames.PlayMaker.Actions.SetRotation
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000800000011000000
+        actionHashCodes: 6ab44904979e4104979e4104
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: myCurrentlyReservedNavSquare
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 1
+            name: myChildTroopPositionPlane
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: myChildBanner
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: myCurrentlyReservedNavSquareRotation
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: myCurrentlyReservedNavSquareRotation
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        stringParams: []
+        byteData: 0000000000000000000000000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000230000001c0000000f0000000f0000000f000000070000000100000014000000230000001c0000000f0000000f0000000f00000007000000010000000100000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramName:
+        - gameObject
+        - quaternion
+        - vector
+        - xAngle
+        - yAngle
+        - zAngle
+        - space
+        - everyFrame
+        - gameObject
+        - quaternion
+        - vector
+        - xAngle
+        - yAngle
+        - zAngle
+        - space
+        - everyFrame
+        - lateUpdate
+        - gameObject
+        - quaternion
+        - vector
+        - xAngle
+        - yAngle
+        - zAngle
+        - space
+        - everyFrame
+        - lateUpdate
+        paramDataPos: 000000000000000000000000000000000100000002000000000000000400000001000000010000000100000003000000040000000500000005000000090000000a0000000200000002000000020000000600000007000000080000000b0000000f00000010000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000000000000040000000100000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -4602,6 +4840,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: myCurrentlyReservedNavSquareRotation
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -4618,6 +4862,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: myChildBanner
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -4625,7 +4875,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -5771,17 +6021,17 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -5791,7 +6041,7 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -5886,7 +6136,7 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -5961,17 +6211,17 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -5981,7 +6231,7 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -6061,12 +6311,12 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
@@ -6076,7 +6326,7 @@ PrefabInstance:
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2531884105945632251, guid: 10a49d4bf1358354fb55277f5586ed38,
         type: 3}
