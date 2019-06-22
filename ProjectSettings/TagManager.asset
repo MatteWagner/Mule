@@ -15,6 +15,8 @@ TagManager:
   - PlayerCharacters
   - UI_PlayerFactionZones
   - Level_ParentObjectLD
+  - LD_BuildingBlock
+  - UI_NavSquareHighlight
   layers:
   - Default
   - TransparentFX
@@ -31,7 +33,7 @@ TagManager:
   - UI_SquadHighlight
   - LevelCollision
   - Navigation UI
-  - 
+  - LD_NavSpace_Player
   - 
   - 
   - 

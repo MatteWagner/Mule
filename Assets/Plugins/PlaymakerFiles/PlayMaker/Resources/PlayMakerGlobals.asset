@@ -115,3 +115,4 @@ MonoBehaviour:
   - globalInstruction_ScrapHarvestingBegins
   - globalInstruction_FeedbackUnitPlacementActivate
   - globalInstruction_FeedbackUnitPlacementDeactivate
+  - globalInstruction_MoveBannerToNavsquare

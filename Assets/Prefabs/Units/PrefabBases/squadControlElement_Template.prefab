@@ -1459,9 +1459,9 @@ GameObject:
   - component: {fileID: 6441741541620294021}
   - component: {fileID: 2033163517736415521}
   - component: {fileID: 7277106945312336067}
+  - component: {fileID: 7105794512889189931}
   - component: {fileID: 7332427350618828278}
   - component: {fileID: 9084154659030593482}
-  - component: {fileID: 7105794512889189931}
   m_Layer: 12
   m_Name: squadControlElement_Template
   m_TagString: Untagged
@@ -3114,7 +3114,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -3185,14 +3185,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetOwner
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.FindGameObject
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000100000005000000
-        actionHashCodes: 5c004505184b5704184b5704
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000500000009000000
+        actionHashCodes: 5c004505184b5704184b5704786b3902
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -3209,6 +3211,12 @@ MonoBehaviour:
           value: {fileID: 0}
         - useVariable: 1
           name: myChild_UnitFlag
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: navSquareHighlightElement
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3261,6 +3269,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Untagged
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: UI_NavSquareHighlight
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3279,7 +3299,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000001400000012000000120000001300000014000000120000001200000013000000
+        paramDataType: 130000001400000012000000120000001300000014000000120000001200000013000000120000001200000013000000
         paramName:
         - storeGameObject
         - gameObject
@@ -3290,159 +3310,11 @@ MonoBehaviour:
         - childName
         - withTag
         - storeResult
-        paramDataPos: 000000000000000000000000010000000100000001000000020000000300000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: Move Banner as Cursor
-      description: Gets and Checks hover over target
-      colorIndex: 3
-      position:
-        serializedVersion: 2
-        x: 336
-        y: 112
-        width: 240.5
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: UpdateBannerPosition
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Get Position of New Square
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.MousePick
-        - HutongGames.PlayMaker.Actions.GameObjectCompare
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000a000000
-        actionHashCodes: 872f9002ef8d8504
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: myNavSquareHoverTargetNew
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: myNavSquareHoverTargetNew
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: myNavSquareHoverTargetCurrent
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 10000
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 10
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        - UpdateBannerPosition
-        byteData: 0101
-        arrayParamSizes: 01000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmInt
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f00000011000000130000001c0000001c0000000f0000000c000000100000001100000001000000140000001300000017000000170000001100000001000000
-        paramName:
-        - rayDistance
-        - storeDidPickObject
-        - storeGameObject
-        - storePoint
-        - storeNormal
-        - storeDistance
-        - layerMask
-        - 
-        - invertMask
-        - everyFrame
-        - gameObjectVariable
-        - compareTo
-        - equalEvent
-        - notEqualEvent
-        - storeResult
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000010000000100000000000000000000000100000000000000000000000100000000000000010000000200000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        - objectName
+        - withTag
+        - store
+        paramDataPos: 000000000000000000000000010000000100000001000000020000000300000002000000040000000500000003000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: Remove Selection State from Self
       description: 
       colorIndex: 3
@@ -3587,9 +3459,9 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 212
+        x: 368
+        y: 176
+        width: 320
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3605,16 +3477,32 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmGameObject
         - HutongGames.PlayMaker.Actions.GetPosition
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5552ad05
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 5b66cf005552ad05
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: myNavSquareHoverTargetNew
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GlobalManager_PlayerInputs
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -3629,7 +3517,19 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM_SelectionManager_NavSquareHoverHighlighting
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: currentNavSquare
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3658,22 +3558,27 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: myChild_BannerPositionSelected
+          name: myNavSquareHoverTargetNewPosition
           tooltip: 
-          showInInspector: 1
+          showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000000
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000
+        paramDataType: 1400000012000000120000001300000001000000140000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
         - gameObject
         - vector
         - x
@@ -3681,8 +3586,8 @@ MonoBehaviour:
         - z
         - space
         - everyFrame
-        paramDataPos: 00000000000000000000000001000000020000000000000004000000
-        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000000000001000000020000000100000005000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000400000001000000
     - name: Move Banner to New NavSquare Position
       description: 
       colorIndex: 3
@@ -3759,9 +3664,9 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: myChild_BannerPositionSelected
+          name: myNavSquareHoverTargetNewPosition
           tooltip: 
-          showInInspector: 1
+          showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
@@ -3791,7 +3696,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 384
-        y: 320
+        y: 416
         width: 394
         height: 32
       isBreakpoint: 0
@@ -3802,7 +3707,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Send feedback event
+        toState: 'EVENT: Tell FeedbackUnitPlacement to Draw Line'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -3862,27 +3767,19 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: Send feedback event
+    - name: 'EVENT: Tell FeedbackUnitPlacement to Draw Line'
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 544
-        y: 384
-        width: 168
-        height: 32
+        x: 592
+        y: 544
+        width: 358
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Move Banner as Cursor
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
@@ -3995,6 +3892,9 @@ MonoBehaviour:
     - name: globalInstruction_FeedbackUnitPlacementDeactivate
       isSystemEvent: 0
       isGlobal: 1
+    - name: globalInstruction_MoveBannerToNavsquare
+      isSystemEvent: 0
+      isGlobal: 1
     - name: globalSelection_SquadDeselect
       isSystemEvent: 0
       isGlobal: 1
@@ -4003,18 +3903,18 @@ MonoBehaviour:
       isGlobal: 1
     globalTransitions:
     - fsmEvent:
-        name: globalSelection_SquadSelect
-        isSystemEvent: 0
-        isGlobal: 1
-      toState: Move Banner as Cursor
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
         name: globalSelection_SquadDeselect
         isSystemEvent: 0
         isGlobal: 1
       toState: Remove Selection State from Self
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: globalInstruction_MoveBannerToNavsquare
+        isSystemEvent: 0
+        isGlobal: 1
+      toState: Get Position of New Square
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
@@ -4061,9 +3961,21 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: myNavSquareHoverTargetNewPosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
-      quaternionVariables: []
+      quaternionVariables:
+      - useVariable: 1
+        name: myNavSquareHoverTargetCurrentRotation
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0, w: 0}
       gameObjectVariables:
       - useVariable: 1
         name: CurrentSelectedChild
@@ -4101,6 +4013,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: navSquareHighlightElement
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -4109,7 +4027,7 @@ MonoBehaviour:
       categories:
       - 
       - Banner States
-      variableCategoryIDs: 000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: Events that control feedback depending on state
     docUrl: 
     showStateLabel: 0
@@ -4177,8 +4095,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 512
-        y: 368
+        x: 304
+        y: 224
         width: 100
         height: 16
       isBreakpoint: 0
@@ -4338,8 +4256,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 736
-        y: 144
+        x: 464
+        y: 176
         width: 221
         height: 32
       isBreakpoint: 0
@@ -4481,8 +4399,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1200
-        y: 160
+        x: 608
+        y: 272
         width: 124
         height: 32
       isBreakpoint: 0
@@ -4586,8 +4504,8 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1376
-        y: 176
+        x: 784
+        y: 288
         width: 185
         height: 16
       isBreakpoint: 0
@@ -4680,7 +4598,7 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000000000001000000
     - name: send deselection event to current navsquare
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
         x: 64
@@ -4785,11 +4703,11 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000000000001000000
     - name: Rotate to Match NavSquare Rotation
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 736
-        y: 192
+        x: 464
+        y: 224
         width: 269
         height: 32
       isBreakpoint: 0
@@ -5591,94 +5509,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!114 &7332427350618828278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719873548817789802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5eb03fc441b4d8fa5e2b3d1547d7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showEvents: 1
-  showContent: 0
-  TextureElementSmall: 0
-  condensedView: 0
-  liveUpdate: 0
-  referenceName: myTroopPositionsArray
-  enablePlayMakerEvents: 0
-  addEvent: 
-  setEvent: 
-  removeEvent: 
-  contentPreviewStartIndex: 0
-  contentPreviewMaxRows: 10
-  preFillType: 0
-  preFillObjectTypeIndex: 0
-  preFillCount: 0
-  preFillKeyList: []
-  preFillBoolList: 
-  preFillColorList: []
-  preFillFloatList: []
-  preFillGameObjectList: []
-  preFillIntList: 
-  preFillMaterialList: []
-  preFillObjectList: []
-  preFillQuaternionList: []
-  preFillRectList: []
-  preFillStringList: []
-  preFillTextureList: []
-  preFillVector2List: []
-  preFillVector3List: []
-  preFillAudioClipList: []
-  preFillByteList: 
-  preFillSpriteList: []
---- !u!114 &9084154659030593482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719873548817789802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5eb03fc441b4d8fa5e2b3d1547d7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showEvents: 0
-  showContent: 0
-  TextureElementSmall: 0
-  condensedView: 0
-  liveUpdate: 0
-  referenceName: myTroopsArray
-  enablePlayMakerEvents: 0
-  addEvent: 
-  setEvent: 
-  removeEvent: 
-  contentPreviewStartIndex: 0
-  contentPreviewMaxRows: 10
-  preFillType: 0
-  preFillObjectTypeIndex: 0
-  preFillCount: 0
-  preFillKeyList: []
-  preFillBoolList: 
-  preFillColorList: []
-  preFillFloatList: []
-  preFillGameObjectList: []
-  preFillIntList: 
-  preFillMaterialList: []
-  preFillObjectList: []
-  preFillQuaternionList: []
-  preFillRectList: []
-  preFillStringList: []
-  preFillTextureList: []
-  preFillVector2List: []
-  preFillVector3List: []
-  preFillAudioClipList: []
-  preFillByteList: 
-  preFillSpriteList: []
 --- !u!114 &7105794512889189931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6099,6 +5929,94 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &7332427350618828278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719873548817789802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5eb03fc441b4d8fa5e2b3d1547d7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showEvents: 1
+  showContent: 0
+  TextureElementSmall: 0
+  condensedView: 0
+  liveUpdate: 0
+  referenceName: myTroopPositionsArray
+  enablePlayMakerEvents: 0
+  addEvent: 
+  setEvent: 
+  removeEvent: 
+  contentPreviewStartIndex: 0
+  contentPreviewMaxRows: 10
+  preFillType: 0
+  preFillObjectTypeIndex: 0
+  preFillCount: 0
+  preFillKeyList: []
+  preFillBoolList: 
+  preFillColorList: []
+  preFillFloatList: []
+  preFillGameObjectList: []
+  preFillIntList: 
+  preFillMaterialList: []
+  preFillObjectList: []
+  preFillQuaternionList: []
+  preFillRectList: []
+  preFillStringList: []
+  preFillTextureList: []
+  preFillVector2List: []
+  preFillVector3List: []
+  preFillAudioClipList: []
+  preFillByteList: 
+  preFillSpriteList: []
+--- !u!114 &9084154659030593482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719873548817789802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5eb03fc441b4d8fa5e2b3d1547d7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showEvents: 0
+  showContent: 0
+  TextureElementSmall: 0
+  condensedView: 0
+  liveUpdate: 0
+  referenceName: myTroopsArray
+  enablePlayMakerEvents: 0
+  addEvent: 
+  setEvent: 
+  removeEvent: 
+  contentPreviewStartIndex: 0
+  contentPreviewMaxRows: 10
+  preFillType: 0
+  preFillObjectTypeIndex: 0
+  preFillCount: 0
+  preFillKeyList: []
+  preFillBoolList: 
+  preFillColorList: []
+  preFillFloatList: []
+  preFillGameObjectList: []
+  preFillIntList: 
+  preFillMaterialList: []
+  preFillObjectList: []
+  preFillQuaternionList: []
+  preFillRectList: []
+  preFillStringList: []
+  preFillTextureList: []
+  preFillVector2List: []
+  preFillVector3List: []
+  preFillAudioClipList: []
+  preFillByteList: 
+  preFillSpriteList: []
 --- !u!1 &6186482701745673247
 GameObject:
   m_ObjectHideFlags: 0
