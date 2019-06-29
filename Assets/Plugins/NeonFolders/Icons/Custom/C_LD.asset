@@ -10,17 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f4e3ee3f029d564bb98eb99ad98a20d, type: 3}
-  m_Name: c_EnemyFactionPrefabs
+  m_Name: C_LD
   m_EditorClassIdentifier: 
   LargeIcon:
     Layers:
     - Icon: {fileID: 2800000, guid: 095af6d36dc1a51489817a2934bb2d8b, type: 3}
-      BlendColor: {r: 0.40784317, g: 0.29411766, b: 0.054901965, a: 1}
+      BlendColor: {r: 0.10826429, g: 0.31132078, b: 0.08957814, a: 1}
       Offset: {x: 0, y: 0}
       Scale: {x: 1, y: 1}
-    - Icon: {fileID: 2800000, guid: 4bb7dde17ee66824abc60ed7aaf3075a, type: 3}
+    - Icon: {fileID: 2800000, guid: 25ed07e9276fe944ba3279bfe857c236, type: 3}
       BlendColor: {r: 1, g: 1, b: 1, a: 1}
       Offset: {x: 0, y: 0}
       Scale: {x: 1, y: 1}
+    - Icon: {fileID: 2800000, guid: 1bb3725e0549a0f4fba48a76e52b3faf, type: 3}
+      BlendColor: {r: 1, g: 1, b: 1, a: 1}
+      Offset: {x: 0.1, y: 0.25}
+      Scale: {x: 0.8, y: 0.8}
   SmallIcon:
     Layers: []

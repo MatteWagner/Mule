@@ -1208,7 +1208,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: On Player Selection
+        toState: Wait for Mouse Down
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1301,14 +1301,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000000000001000000020000000000000004000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000
-    - name: On Player Selection
+    - name: Wait for Mouse Down
       description: 
       colorIndex: 6
       position:
         serializedVersion: 2
         x: 304
         y: 128
-        width: 161
+        width: 172
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1318,7 +1318,7 @@ MonoBehaviour:
           name: MOUSE DOWN
           isSystemEvent: 1
           isGlobal: 0
-        toState: 'TEST: Does Player Have Squad Selected?'
+        toState: 'TEST: Is the mouse currently blocked?'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1410,7 +1410,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 320
-        y: 432
+        y: 416
         width: 152
         height: 32
       isBreakpoint: 0
@@ -1421,7 +1421,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: On Player Selection
+        toState: Wait for Mouse Down
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1482,8 +1482,8 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 864
-        y: 176
+        x: 1184
+        y: 192
         width: 242
         height: 48
       isBreakpoint: 0
@@ -1597,8 +1597,8 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 528
-        y: 144
+        x: 848
+        y: 160
         width: 303
         height: 48
       isBreakpoint: 0
@@ -1686,8 +1686,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 896
-        y: 288
+        x: 1472
+        y: 272
         width: 330
         height: 32
       isBreakpoint: 0
@@ -1779,8 +1779,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1024
-        y: 416
+        x: 1600
+        y: 400
         width: 338
         height: 32
       isBreakpoint: 0
@@ -1884,8 +1884,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 896
-        y: 240
+        x: 1472
+        y: 224
         width: 206
         height: 32
       isBreakpoint: 0
@@ -1977,8 +1977,8 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 1024
-        y: 336
+        x: 1600
+        y: 320
         width: 203
         height: 48
       isBreakpoint: 0
@@ -2092,8 +2092,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1568
-        y: 352
+        x: 2000
+        y: 336
         width: 337
         height: 32
       isBreakpoint: 0
@@ -2225,6 +2225,137 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000001000000000000000000000000000000000000000000000001000000
         paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
+    - name: 'TEST: Is the mouse currently blocked?'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 512
+        y: 144
+        width: 283
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: playerHoverIsBlockedNegative
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: 'TEST: Does Player Have Squad Selected?'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: playerHoverIsBlockerPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait for Mouse Up
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmGameObject
+        - HutongGames.PlayMaker.Actions.GameObjectCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 5b66cf00ef8d8504
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: playerInputCurrentRayTarget
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: mySelf
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GlobalManager_PlayerInputs
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: playerInputCurrentRayTarget
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM_SelectionManager_NavSquareHoverHighlighting
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: currentRayTarget
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - playerHoverIsBlockedNegative
+        - playerHoverIsBlockerPositive
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001300000001000000140000001300000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - gameObjectVariable
+        - compareTo
+        - equalEvent
+        - notEqualEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000010000000100000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -2265,6 +2396,12 @@ MonoBehaviour:
     - name: globalSelection_NavSquareSelected
       isSystemEvent: 0
       isGlobal: 1
+    - name: playerHoverIsBlockedNegative
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: playerHoverIsBlockerPositive
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions: []
     variables:
       floatVariables: []
@@ -2313,6 +2450,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: playerInputCurrentRayTarget
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -2320,7 +2463,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

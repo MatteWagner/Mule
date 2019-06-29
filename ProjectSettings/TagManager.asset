@@ -17,6 +17,8 @@ TagManager:
   - Level_ParentObjectLD
   - LD_BuildingBlock
   - UI_NavSquareHighlight
+  - LD_VEH_CharacterCollisionDetection
+  - LD_VEH_ScrapDeliveryCollision
   layers:
   - Default
   - TransparentFX

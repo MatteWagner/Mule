@@ -15,20 +15,20 @@ MonoBehaviour:
   LargeIcon:
     Layers:
     - Icon: {fileID: 2800000, guid: 095af6d36dc1a51489817a2934bb2d8b, type: 3}
-      BlendColor: {r: 0.46226418, g: 0.333674, b: 0.06323426, a: 1}
+      BlendColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
       Offset: {x: 0, y: 0}
       Scale: {x: 1, y: 1}
-    - Icon: {fileID: 2800000, guid: 9d6ce3251e4367947821034701e5c8d9, type: 3}
+    - Icon: {fileID: 2800000, guid: 5bcf831aa5215e04c8e7bff1fabc991f, type: 3}
       BlendColor: {r: 1, g: 1, b: 1, a: 1}
-      Offset: {x: 1.09, y: 0}
-      Scale: {x: -1, y: 1}
+      Offset: {x: 0, y: 0}
+      Scale: {x: 1, y: 1}
   SmallIcon:
     Layers:
     - Icon: {fileID: 2800000, guid: 095af6d36dc1a51489817a2934bb2d8b, type: 3}
-      BlendColor: {r: 0.46226418, g: 0.333674, b: 0.06323426, a: 1}
+      BlendColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
       Offset: {x: 0, y: 0}
       Scale: {x: 1, y: 1}
-    - Icon: {fileID: 2800000, guid: 9d6ce3251e4367947821034701e5c8d9, type: 3}
+    - Icon: {fileID: 2800000, guid: 5bcf831aa5215e04c8e7bff1fabc991f, type: 3}
       BlendColor: {r: 1, g: 1, b: 1, a: 1}
-      Offset: {x: 1.09, y: 0}
-      Scale: {x: -1, y: 1}
+      Offset: {x: 0, y: 0}
+      Scale: {x: 1, y: 1}

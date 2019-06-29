@@ -116,3 +116,10 @@ MonoBehaviour:
   - globalInstruction_FeedbackUnitPlacementActivate
   - globalInstruction_FeedbackUnitPlacementDeactivate
   - globalInstruction_MoveBannerToNavsquare
+  - globalInstruction_ScrapMoveToDeliveryDestination
+  - globalInstruction_ScrapMoveToHarvestDestination
+  - globalInstruction_AddScrapValue
+  - globalInstruction_PlayerCollisionEnter
+  - globalInstruction_PlayerCollisionExit
+  - globalInstruction_AddScrapToUnitTotal
+  - globalInstruction_ScrapDeliveredToHarvester

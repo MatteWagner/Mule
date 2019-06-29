@@ -1408,13 +1408,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetOwner
         - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GetPosition
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000001000000
-        actionHashCodes: 5c004505184b5704
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000005000000
+        actionHashCodes: 5c004505184b57045552ad05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1434,6 +1436,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 0
             name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: childMyHighlightElement
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1461,37 +1471,68 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: myChildHighlightPositionDefault
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
+        byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000014000000120000001200000013000000
+        paramDataType: 1300000014000000120000001200000013000000140000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
         - storeGameObject
         - gameObject
         - childName
         - withTag
         - storeResult
-        paramDataPos: 0000000000000000000000000100000001000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
-    - name: Check to see if Mouse is blocked
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        paramDataPos: 000000000000000000000000010000000100000001000000000000000000000001000000020000000000000004000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000
+    - name: Wait for Mouse to Have Unblocked ray to a NavSquare
       description: 
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 818
-        y: 461
-        width: 243
+        x: 816
+        y: 464
+        width: 390
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1652,44 +1693,40 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000000000001000000010000000000000000000000010000000100000000000000010000000200000001000000030000000400000000000000010000000200000002000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
-    - name: Wait For Hover Exit Or mouse hover to be  unblocked
+    - name: Set Current Ray Target as CurrentNavSquare
       description: 
-      colorIndex: 6
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1536
-        y: 800
-        width: 382
+        x: 1264
+        y: 480
+        width: 328
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: MOUSE EXIT
+          name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Send Hover Exit Event 2
+        toState: 'TEST: Am I currently reserved?'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.MousePick
-        - HutongGames.PlayMaker.Actions.GetLayer
-        - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.SetGameObject
         customNames:
         - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000b0000000e000000
-        actionHashCodes: 872f9002ce5bec0009faa102
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 4d51cf04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: currentRayTarget
+          name: currentNavSquare
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1712,195 +1749,8 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 100000
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 15
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 13
-        - useVariable: 1
-          name: myCurrentRayTargetsLayer
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: myCurrentRayTargetsLayer
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 15
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        - MOUSE EXIT
-        - MOUSE EXIT
-        byteData: 010101
-        arrayParamSizes: 02000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmInt
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f00000011000000130000001c0000001c0000000f0000000c00000010000000100000001100000001000000130000001000000001000000100000001000000017000000170000001700000001000000
-        paramName:
-        - rayDistance
-        - storeDidPickObject
-        - storeGameObject
-        - storePoint
-        - storeNormal
-        - storeDistance
-        - layerMask
-        - 
-        - 
-        - invertMask
-        - everyFrame
-        - gameObject
-        - storeResult
-        - everyFrame
-        - integer1
-        - integer2
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        paramDataPos: 0000000000000000000000000000000001000000010000000000000000000000010000000100000000000000010000000200000001000000030000000400000000000000010000000200000002000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
-    - name: Set Current Ray Target as CurrentNavSquare
-      description: 
-      colorIndex: 3
-      position:
-        serializedVersion: 2
-        x: 1136
-        y: 624
-        width: 328
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: 'EVENT: Tell Selected Squad Banner to move to Current Nav Square'
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetMaterial
-        - HutongGames.PlayMaker.Actions.SetGameObject
-        customNames:
-        - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 11ab5a024d51cf04
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: currentNavSquare
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: currentRayTarget
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: currentRayTarget
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 2100000, guid: 921d62542763ccf4d9eb37559c626eb0, type: 2}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
         fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -1913,23 +1763,20 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001000000020000000130000001300000001000000
+        paramDataType: 130000001300000001000000
         paramName:
-        - gameObject
-        - materialIndex
-        - material
         - variable
         - gameObject
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000100000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     - name: 'TEST: Am I currently reserved?'
       description: 
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 834
-        y: 589
+        x: 1344
+        y: 544
         width: 237
         height: 48
       isBreakpoint: 0
@@ -1940,7 +1787,7 @@ MonoBehaviour:
           name: CurrentlyReservedPositive
           isSystemEvent: 0
           isGlobal: 0
-        toState: Check to see if Mouse is blocked
+        toState: wait for mouse exit
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1948,7 +1795,7 @@ MonoBehaviour:
           name: CurrentlyReservedNegative
           isSystemEvent: 0
           isGlobal: 0
-        toState: Set Current Ray Target as CurrentNavSquare
+        toState: 'EVENT: Send Banner Move Event to Current Squad'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1969,7 +1816,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: currentRayTarget
+            name: currentNavSquare
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1986,7 +1833,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: FSM_NavSquareSelection
+          value: FSM_GeneralVariables
         - useVariable: 0
           name: 
           tooltip: 
@@ -2038,69 +1885,39 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
         paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
-    - name: 'TEST: Am I Currently Highlighted?'
-      description: 
-      colorIndex: 5
+    - name: Reset RaycastLayer Int
+      description: Resets int to prevent breakage due to Null GameObject value
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 656
-        y: 784
-        width: 255
-        height: 48
+        x: 2304
+        y: 448
+        width: 309
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: MouseHoverBlockedPositive
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
-        toState: Wait For Hover Exit Or mouse hover to be  unblocked
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: MouseHOverBlockedNegative
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Set Current Ray Target as CurrentNavSquare
+        toState: Wait for Mouse to Have Unblocked ray to a NavSquare
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.MousePick
-        - HutongGames.PlayMaker.Actions.GameObjectCompare
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000b000000
-        actionHashCodes: 872f9002ef8d8504
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: currentRayTarget
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: mySelf
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: currentRayTarget
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2112,167 +1929,8 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 10000
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 15
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 13
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - MouseHOverBlockedNegative
-        - 
-        byteData: 0001
-        arrayParamSizes: 02000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmInt
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f00000011000000130000001c0000001c0000000f0000000c00000010000000100000001100000001000000140000001300000017000000170000001100000001000000
-        paramName:
-        - rayDistance
-        - storeDidPickObject
-        - storeGameObject
-        - storePoint
-        - storeNormal
-        - storeDistance
-        - layerMask
-        - 
-        - 
-        - invertMask
-        - everyFrame
-        - gameObjectVariable
-        - compareTo
-        - equalEvent
-        - notEqualEvent
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000000000000000000000000000001000000010000000000000000000000010000000100000000000000000000000100000000000000010000000200000001000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
-    - name: Send Hover Exit Event 2
-      description: 
-      colorIndex: 3
-      position:
-        serializedVersion: 2
-        x: 2066
-        y: 637
-        width: 190
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Check to see if Mouse is blocked
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetMaterial
-        - HutongGames.PlayMaker.Actions.SetIntValue
-        customNames:
-        - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 11ab5a02603dd905
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: currentRayTarget
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 2100000, guid: 16ec4332b3b3d2a449ad60651a3addd5, type: 2}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 1
           name: myCurrentRayTargetsLayer
           tooltip: 
@@ -2297,39 +1955,54 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001000000020000000100000001000000001000000
+        paramDataType: 100000001000000001000000
         paramName:
-        - gameObject
-        - materialIndex
-        - material
         - intVariable
         - intValue
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
-    - name: Mouse Enters NavSquare
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Set NavSquareHighlight Position to Default
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1184
-        y: 352
-        width: 238
-        height: 16
+        x: 928
+        y: 144
+        width: 314
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Reset RaycastLayer Int 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: f6e5be03
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: childMyHighlightElement
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2341,33 +2014,65 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: myChildHighlightPositionDefault
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: Wait for Mouse Exit
+        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
+        paramDataPos: 0000000000000000000000000100000002000000000000000400000005000000
+        paramByteDataSize: 0000000000000000000000000000000000000000040000000100000001000000
+    - name: Wait for Mouse Exit or Select
       description: 
-      colorIndex: 0
+      colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1696
-        y: 624
-        width: 159
-        height: 32
+        x: 1504
+        y: 752
+        width: 222
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -2376,7 +2081,15 @@ MonoBehaviour:
           name: MOUSE EXIT
           isSystemEvent: 1
           isGlobal: 0
-        toState: Send Hover Exit Event 2
+        toState: Reset RaycastLayer Int
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: MOUSE DOWN
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: E
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2439,7 +2152,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        - 
+        - MOUSE DOWN
         - 
         - MOUSE EXIT
         byteData: 01
@@ -2462,14 +2175,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000001000000020000000300000000000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: 'EVENT: Tell Selected Squad Banner to move to Current Nav Square'
+    - name: 'EVENT: Send Banner Move Event to Current Squad'
       description: 
-      colorIndex: 0
+      colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1152
-        y: 672
-        width: 400
+        x: 1344
+        y: 624
+        width: 362
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2479,7 +2192,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Tell Highlight Element to move to Current Nav Square
+        toState: Set NavSquareHighlight Position to Current NavSquare
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2567,14 +2280,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Tell Highlight Element to move to Current Nav Square
+    - name: Set NavSquareHighlight Position to Current NavSquare
       description: 
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1152
-        y: 720
-        width: 383
+        x: 1344
+        y: 688
+        width: 393
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2584,7 +2297,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Wait for Mouse Exit
+        toState: Wait for Mouse Exit or Select
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2807,8 +2520,287 @@ MonoBehaviour:
         - lateUpdate
         paramDataPos: 000000000000000000000000000000000100000002000000000000000400000001000000010000000100000003000000040000000500000005000000090000000a00000002000000020000000600000007000000080000000b0000000f0000000300000003000000090000000a0000000b000000100000001400000015000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000000000000040000000100000001000000
+    - name: Reset RaycastLayer Int 2
+      description: Resets int to prevent breakage due to Null GameObject value
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 1296
+        y: 144
+        width: 315.5
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: myCurrentRayTargetsLayer
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: E
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2176
+        y: 608
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: on mouse up or exit
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 976
+        y: 320
+        width: 160
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: wait for mouse exit
+      description: 
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 1728
+        y: 560
+        width: 158
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: MOUSE EXIT
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Reset RaycastLayer Int
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.MousePickEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 1c615902
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: currentNavSquare
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 10000
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 15
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - 
+        - 
+        - MOUSE EXIT
+        byteData: 01
+        arrayParamSizes: 01000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmInt
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000000f000000170000001700000017000000170000000c000000100000001100000001000000
+        paramName:
+        - GameObject
+        - rayDistance
+        - mouseOver
+        - mouseDown
+        - mouseUp
+        - mouseOff
+        - layerMask
+        - 
+        - invertMask
+        - everyFrame
+        paramDataPos: 00000000000000000000000001000000020000000300000000000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: MOUSE DOWN
       isSystemEvent: 1
       isGlobal: 0
     - name: MOUSE ENTER
@@ -2849,7 +2841,7 @@ MonoBehaviour:
         name: globalSelection_SquadDeselect
         isSystemEvent: 0
         isGlobal: 1
-      toState: Mouse Enters NavSquare
+      toState: Set NavSquareHighlight Position to Default
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
@@ -2857,7 +2849,7 @@ MonoBehaviour:
         name: globalSelection_SquadSelect
         isSystemEvent: 0
         isGlobal: 1
-      toState: Check to see if Mouse is blocked
+      toState: Wait for Mouse to Have Unblocked ray to a NavSquare
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
@@ -2888,6 +2880,12 @@ MonoBehaviour:
       vector3Variables:
       - useVariable: 1
         name: currentNavSquarePosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: myChildHighlightPositionDefault
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2957,7 +2955,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -3022,7 +3020,7 @@ PrefabInstance:
     - target: {fileID: 3784138709946055809, guid: 66b299222c1e8b249869455d40446413,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3784138709946055809, guid: 66b299222c1e8b249869455d40446413,
         type: 3}
