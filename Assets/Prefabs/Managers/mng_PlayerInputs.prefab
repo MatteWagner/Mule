@@ -312,7 +312,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 116
+        y: 132
         width: 100
         height: 16
       isBreakpoint: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 208
+        x: 224
         y: 112
         width: 400
         height: 48
@@ -392,18 +392,18 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: selection_CurrentlyHasSquadSelectedPositive
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 'Test: Is Current Squad Same as New Squad?'
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
           name: selection_CurrentlyHasSquadSelectedNegative
           isSystemEvent: 0
           isGlobal: 0
         toState: Set New Selected Squad to be Current Squad
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: selection_CurrentlyHasSquadSelectedPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: 'Test: Is Current Squad Same as New Squad?'
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -466,8 +466,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 688
-        y: 432
+        x: 1216
+        y: 128
         width: 400
         height: 32
       isBreakpoint: 0
@@ -606,8 +606,8 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 688
-        y: 128
+        x: 256
+        y: 256
         width: 362
         height: 48
       isBreakpoint: 0
@@ -615,18 +615,18 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: selection_NewSquadEqualsCurrentSquadPositive
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Deselect Current Squad
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
           name: selection_NewSquadEqualsCurrentSquadNegative
           isSystemEvent: 0
           isGlobal: 0
         toState: 'EVENT: Send Deselect Event to Current Selection'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: selection_NewSquadEqualsCurrentSquadPositive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Deselect Current Squad
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -704,8 +704,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1120
-        y: 144
+        x: 256
+        y: 448
         width: 395.5
         height: 32
       isBreakpoint: 0
@@ -843,8 +843,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 688
-        y: 288
+        x: 736
+        y: 272
         width: 353
         height: 32
       isBreakpoint: 0
@@ -948,14 +948,22 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 800
-        y: 560
+        x: 1664
+        y: 144
         width: 292
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: 'UI Update: Update Selection UI Icon'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
@@ -1042,17 +1050,25 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000000000001000000
     - name: 'EVENT: Send Deselected State to Hover FSM'
       description: 
-      colorIndex: 0
+      colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1360
-        y: 320
+        x: 752
+        y: 464
         width: 324
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: 'UI Update: Update Selection UI Icon'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
@@ -1137,6 +1153,103 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: 'UI Update: Update Selection UI Icon'
+      description: 
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 2064
+        y: 240
+        width: 271
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: GlobalManager_HUD
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM_PlayerFactionSquadPanel
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - globalUI_UpdatePlayerFactionSquadPanel
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1172,6 +1285,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 1
     - name: globalSelection_SquadSelect
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: globalUI_UpdatePlayerFactionSquadPanel
       isSystemEvent: 0
       isGlobal: 1
     - name: selection_CompareCurrentSquadToNewSquad
@@ -1968,7 +2084,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 928
-        y: 144
+        y: 128
         width: 314
         height: 32
       isBreakpoint: 0

@@ -36,8 +36,8 @@ TagManager:
   - LevelCollision
   - Navigation UI
   - LD_NavSpace_Player
-  - 
-  - 
+  - UI_Background
+  - UI_Foreground
   - 
   - 
   - 
@@ -70,4 +70,10 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2474200687
+    locked: 0
+  - name: UI_Foreground
+    uniqueID: 261414101
+    locked: 0
+  - name: UI_Background
+    uniqueID: 1256673287
     locked: 0
